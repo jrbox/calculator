@@ -3,6 +3,12 @@ on :
   push:
     branches:
       - main
+# Trigger : Quand je push une nouvelle version
+# on :
+#  push:
+#    tags:
+#      - v*
+
 #  pull_request:
 #    branches: 
 #      - main
