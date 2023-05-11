@@ -1,0 +1,21 @@
+# Trigger : Quand je push sur la branche "main"
+on :
+  push:
+    branches:
+      - main
+#  pull_request:
+#    branches: 
+#      - main
+#  schedule:
+#    - cron: 00 09 * * *
+    
+jobs:
+  demo: 
+    name: Demonstration d'une CI avec GitHubAction
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        run : echo "Hello world"
+# tache en sequence
+#  other:
+#    needs: [demo]
