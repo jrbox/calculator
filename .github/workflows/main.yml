@@ -32,6 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      # ref_name prend le numero de version avec la mise en place d'un tag V1
+      # ref_name prend le nom de la branche (ex main) s'il n'y a pas de tag
       - run: echo ${{github.ref_name}}
       - name: Login to Docker Hub
         uses: docker/login-action@v2
