@@ -15,7 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello world
-        run : echo "Hello world"
+        run: echo "Hello world"
+      - run: ls -a
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+      - run: ls -a
 # tache en sequence
 #  other:
 #    needs: [demo]
